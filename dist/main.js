@@ -10,7 +10,6 @@ const swagger_json_1 = __importDefault(require("./swagger.json"));
 const app = express_1.default();
 const port = 3000;
 routes_1.RegisterRoutes(app);
-//app.get('/', (req, res) => res.send('Hello World!'));
 // Swagger set up
 app.use('/api/v1/docs', swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swagger_json_1.default, { explorer: true }));
 app.listen(port, () => console.log(`Server started listening to port ${port}`));

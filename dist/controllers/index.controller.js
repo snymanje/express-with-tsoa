@@ -18,6 +18,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.IndexController = void 0;
 const tsoa_1 = require("tsoa");
 let IndexController = class IndexController extends tsoa_1.Controller {
     index() {
@@ -27,6 +28,11 @@ let IndexController = class IndexController extends tsoa_1.Controller {
     }
     msg() {
         return { msg: 'This is a message' };
+    }
+    newUSer() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return { msg: 'This is a message' };
+        });
     }
 };
 __decorate([
@@ -41,6 +47,12 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], IndexController.prototype, "msg", null);
+__decorate([
+    tsoa_1.Post('/newUSer'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], IndexController.prototype, "newUSer", null);
 IndexController = __decorate([
     tsoa_1.Route('')
 ], IndexController);

@@ -71,6 +71,33 @@
                 "security": [],
                 "parameters": []
             }
+        },
+        "/newUSer": {
+            "post": {
+                "operationId": "NewUSer",
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "msg": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "msg"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [],
+                "parameters": []
+            }
         }
     },
     "servers": [
